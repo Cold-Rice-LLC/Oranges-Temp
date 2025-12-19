@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+/*
+Fonts 
+*/
+
+@font-face {
+  font-family: 'Quadrant Mono';
+  src: url('../public/QuadrantTextMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quadrant Mono';
+  src: url('../public/QuadrantTextMono-RegularItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/*
+Tailwind Vars
+*/
+
+@theme {
+  --text-base: 3.6rem;
+  --text-base--line-height: 1.11;
+
+  --line-height-default: 1.11;
+
+  --color-black: #000;
+  --color-white: #fff;
+  --color-green: #3f6a00;
+
+  --spacing-base: 1.5em;
+  --spacing-md: 2.5em;
+  --spacing-margin: 8rem;
+  --spacing-margin-sm: 3rem;
+  --spacing-gutter: 2rem;
+  --spacing-gutter-sm: 1rem;
+
+  --font-primary: 'Quadrant Mono', monospace;
+
+  --tracking-wide: 1ch;
+}
+
+/*
+Styles
+*/
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+html {
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: clamp(1.8rem, 2vw, 3.6rem);
+  font-family: var(--font-primary);
+  line-height: var(--line-height-default);
+  color: var(--color-black);
+  text-transform: uppercase;
+}
+
+button {
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+}
+
+section {
+  text-align: center;
+}
+
+/*
+Utils
+*/
+
+@utility vert-spacing-base {
+  & > * + * {
+    margin-top: var(--spacing-base);
+  }
+}
+
+@utility vert-spacing-md {
+  & > * + * {
+    margin-top: var(--spacing-md);
+  }
+}
