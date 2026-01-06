@@ -31,12 +31,13 @@ Tailwind Vars
   --color-black: #000;
   --color-white: #fff;
   --color-green: #3f6a00;
+  --color-yellow: yellow;
 
   --spacing-base: 1.5em;
   --spacing-md: 2.5em;
   --spacing-margin: 8rem;
   --spacing-margin-sm: 3rem;
-  --spacing-gutter: 2rem;
+  --spacing-gutter: 2.5rem;
   --spacing-gutter-sm: 1rem;
 
   --font-primary: 'Quadrant Mono', monospace;
@@ -53,8 +54,8 @@ Styles
 }
 
 ::selection {
-  background-color: var(--color-green);
-  color: var(--color-white);
+  background-color: var(--color-yellow);
+  color: unset;
 }
 
 html {
@@ -68,6 +69,7 @@ body {
   line-height: var(--line-height-default);
   color: var(--color-black);
   text-transform: uppercase;
+  max-width: 70ch;
 }
 
 button {
@@ -97,3 +99,21 @@ Utils
     margin-top: var(--spacing-md);
   }
 }
+
+/*
+Animations
+*/
+
+/* [data-animate] {
+  @media (min-width: 1024px) {
+    opacity: 0;
+  }
+}
+
+[data-animate-mobile] {
+  opacity: 0;
+
+  @media (min-width: 1024px) {
+    opacity: 1;
+  }
+} */
